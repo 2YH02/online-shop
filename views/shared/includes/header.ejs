@@ -1,4 +1,15 @@
 <header>
   <div><a href="">YHY</a></div>
-  <nav></nav>
+  <nav>
+    <ul>
+      <% if (locals.Auth) { %>
+        <li>
+          <form action="/logout" method="POST">
+            <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+            <button>로그아웃</button>
+          </form>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
 </header>
