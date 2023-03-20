@@ -1,0 +1,38 @@
+<form
+  action="<%= submitPath %>?_csrf=<%= locals.csrfToken %>"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <div>
+    <label class="add-pro" for="title">상품 이름</label>
+    <input type="text" id="title" name="title" value="<%= product.title %>" required />
+  </div>
+  <div>
+    <label class="add-pro" for="image">상품 이미지</label>
+    <input type="file" id="image" name="image" accept="image/png, image/jpg" <% if (imageRequired) { %>required<% } %> />
+  </div>
+  <div>
+    <label class="add-pro" for="summary">상품 요약</label>
+    <input type="text" id="summary" name="summary" value="<%= product.summary %>" maxlength="250" required />
+  </div>
+  <div>
+    <label class="add-pro" for="price">상품 가격</label>
+    <input
+      type="number"
+      id="price"
+      name="price"
+      value="<%= product.price %>"
+      min="100"
+      step="100"
+      required
+    />
+  </div>
+  <div>
+    <label class="add-pro" for="description">상품 설명</label>
+    <textarea id="description" name="description" rows="7" required><%= product.description %></textarea>
+  </div>
+  <div>
+    <button type="reset" class="btn btn-alt">초기화</button>
+    <button class="btn">저장</button>
+  </div>
+</form>
