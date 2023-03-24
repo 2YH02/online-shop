@@ -1,4 +1,4 @@
-function protectRoutes(req, res, next) {
+function protectRoutes(error, req, res, next) {
   if (!res.locals.isAuth) {
     return res.redirect("/401");
   }
