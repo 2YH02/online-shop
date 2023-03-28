@@ -1,8 +1,10 @@
 <%- include('../../shared/includes/head', { pageTitle: 'All Your orders' }) %>
+<link rel="stylesheet" href="/styles/orders.css">
 </head>
 <body>
     <%- include("../../shared/includes/header") %>
     <main>
-      <h1>주문 목록</h1>   
+      <h1>주문 목록</h1>
+      <%- include('../../shared/includes/order-list') %>
     </main>
 <%- include("../../shared/includes/footer") %>

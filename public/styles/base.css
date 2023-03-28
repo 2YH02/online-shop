@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   font-family: "Dongle", sans-serif;
   --color-gray-50: rgb(243, 236, 230);
   --color-gray-100: rgb(207, 201, 195);
